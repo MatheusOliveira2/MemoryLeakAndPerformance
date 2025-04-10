@@ -23,6 +23,9 @@ export class AppRoot {
       { path: '/goodINP', component: 'sy-dle-good-inp' },
       { path: '/badCLS', component: 'sy-dle-bad-cls' },
       { path: '/goodCLS', component: 'sy-dle-good-cls' },
+      { path: '/badRender', component: 'sy-dle-bad-render' },
+      { path: '/goodRender', component: 'sy-dle-good-render' },
+
     ]);
   }
 
@@ -40,6 +43,8 @@ export class AppRoot {
           <a href="/goodINP">INP BOM</a>
           <a href="/badCLS">CLS RUIM</a>
           <a href="/goodCLS">CLS BOM</a>
+          <a href="/badRender">Render RUIM</a>
+          <a href="/goodRender">Render BOM</a>
         </nav>
         <main></main>
       </div>

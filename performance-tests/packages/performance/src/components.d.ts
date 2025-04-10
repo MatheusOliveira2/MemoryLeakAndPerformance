@@ -16,6 +16,8 @@ export namespace Components {
     }
     interface SyDleBadLcpWillload {
     }
+    interface SyDleBadRender {
+    }
     interface SyDleExample {
     }
     interface SyDleGoodCls {
@@ -25,6 +27,11 @@ export namespace Components {
     interface SyDleGoodLcpImage {
     }
     interface SyDleGoodLcpWillload {
+    }
+    interface SyDleGoodRender {
+    }
+    interface SyDleListItem {
+        "value": {id: number};
     }
     interface SyDleMediumLcpWillload {
     }
@@ -60,6 +67,12 @@ declare global {
         prototype: HTMLSyDleBadLcpWillloadElement;
         new (): HTMLSyDleBadLcpWillloadElement;
     };
+    interface HTMLSyDleBadRenderElement extends Components.SyDleBadRender, HTMLStencilElement {
+    }
+    var HTMLSyDleBadRenderElement: {
+        prototype: HTMLSyDleBadRenderElement;
+        new (): HTMLSyDleBadRenderElement;
+    };
     interface HTMLSyDleExampleElement extends Components.SyDleExample, HTMLStencilElement {
     }
     var HTMLSyDleExampleElement: {
@@ -90,6 +103,18 @@ declare global {
         prototype: HTMLSyDleGoodLcpWillloadElement;
         new (): HTMLSyDleGoodLcpWillloadElement;
     };
+    interface HTMLSyDleGoodRenderElement extends Components.SyDleGoodRender, HTMLStencilElement {
+    }
+    var HTMLSyDleGoodRenderElement: {
+        prototype: HTMLSyDleGoodRenderElement;
+        new (): HTMLSyDleGoodRenderElement;
+    };
+    interface HTMLSyDleListItemElement extends Components.SyDleListItem, HTMLStencilElement {
+    }
+    var HTMLSyDleListItemElement: {
+        prototype: HTMLSyDleListItemElement;
+        new (): HTMLSyDleListItemElement;
+    };
     interface HTMLSyDleMediumLcpWillloadElement extends Components.SyDleMediumLcpWillload, HTMLStencilElement {
     }
     var HTMLSyDleMediumLcpWillloadElement: {
@@ -102,11 +127,14 @@ declare global {
         "sy-dle-bad-inp": HTMLSyDleBadInpElement;
         "sy-dle-bad-lcp-image": HTMLSyDleBadLcpImageElement;
         "sy-dle-bad-lcp-willload": HTMLSyDleBadLcpWillloadElement;
+        "sy-dle-bad-render": HTMLSyDleBadRenderElement;
         "sy-dle-example": HTMLSyDleExampleElement;
         "sy-dle-good-cls": HTMLSyDleGoodClsElement;
         "sy-dle-good-inp": HTMLSyDleGoodInpElement;
         "sy-dle-good-lcp-image": HTMLSyDleGoodLcpImageElement;
         "sy-dle-good-lcp-willload": HTMLSyDleGoodLcpWillloadElement;
+        "sy-dle-good-render": HTMLSyDleGoodRenderElement;
+        "sy-dle-list-item": HTMLSyDleListItemElement;
         "sy-dle-medium-lcp-willload": HTMLSyDleMediumLcpWillloadElement;
     }
 }
@@ -121,6 +149,8 @@ declare namespace LocalJSX {
     }
     interface SyDleBadLcpWillload {
     }
+    interface SyDleBadRender {
+    }
     interface SyDleExample {
     }
     interface SyDleGoodCls {
@@ -131,6 +161,11 @@ declare namespace LocalJSX {
     }
     interface SyDleGoodLcpWillload {
     }
+    interface SyDleGoodRender {
+    }
+    interface SyDleListItem {
+        "value"?: {id: number};
+    }
     interface SyDleMediumLcpWillload {
     }
     interface IntrinsicElements {
@@ -139,11 +174,14 @@ declare namespace LocalJSX {
         "sy-dle-bad-inp": SyDleBadInp;
         "sy-dle-bad-lcp-image": SyDleBadLcpImage;
         "sy-dle-bad-lcp-willload": SyDleBadLcpWillload;
+        "sy-dle-bad-render": SyDleBadRender;
         "sy-dle-example": SyDleExample;
         "sy-dle-good-cls": SyDleGoodCls;
         "sy-dle-good-inp": SyDleGoodInp;
         "sy-dle-good-lcp-image": SyDleGoodLcpImage;
         "sy-dle-good-lcp-willload": SyDleGoodLcpWillload;
+        "sy-dle-good-render": SyDleGoodRender;
+        "sy-dle-list-item": SyDleListItem;
         "sy-dle-medium-lcp-willload": SyDleMediumLcpWillload;
     }
 }
@@ -156,11 +194,14 @@ declare module "@stencil/core" {
             "sy-dle-bad-inp": LocalJSX.SyDleBadInp & JSXBase.HTMLAttributes<HTMLSyDleBadInpElement>;
             "sy-dle-bad-lcp-image": LocalJSX.SyDleBadLcpImage & JSXBase.HTMLAttributes<HTMLSyDleBadLcpImageElement>;
             "sy-dle-bad-lcp-willload": LocalJSX.SyDleBadLcpWillload & JSXBase.HTMLAttributes<HTMLSyDleBadLcpWillloadElement>;
+            "sy-dle-bad-render": LocalJSX.SyDleBadRender & JSXBase.HTMLAttributes<HTMLSyDleBadRenderElement>;
             "sy-dle-example": LocalJSX.SyDleExample & JSXBase.HTMLAttributes<HTMLSyDleExampleElement>;
             "sy-dle-good-cls": LocalJSX.SyDleGoodCls & JSXBase.HTMLAttributes<HTMLSyDleGoodClsElement>;
             "sy-dle-good-inp": LocalJSX.SyDleGoodInp & JSXBase.HTMLAttributes<HTMLSyDleGoodInpElement>;
             "sy-dle-good-lcp-image": LocalJSX.SyDleGoodLcpImage & JSXBase.HTMLAttributes<HTMLSyDleGoodLcpImageElement>;
             "sy-dle-good-lcp-willload": LocalJSX.SyDleGoodLcpWillload & JSXBase.HTMLAttributes<HTMLSyDleGoodLcpWillloadElement>;
+            "sy-dle-good-render": LocalJSX.SyDleGoodRender & JSXBase.HTMLAttributes<HTMLSyDleGoodRenderElement>;
+            "sy-dle-list-item": LocalJSX.SyDleListItem & JSXBase.HTMLAttributes<HTMLSyDleListItemElement>;
             "sy-dle-medium-lcp-willload": LocalJSX.SyDleMediumLcpWillload & JSXBase.HTMLAttributes<HTMLSyDleMediumLcpWillloadElement>;
         }
     }
