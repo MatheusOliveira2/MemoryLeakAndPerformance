@@ -8,6 +8,8 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface SyDleAppRoot {
     }
+    interface SyDleBadCls {
+    }
     interface SyDleBadInp {
     }
     interface SyDleBadLcpImage {
@@ -15,6 +17,8 @@ export namespace Components {
     interface SyDleBadLcpWillload {
     }
     interface SyDleExample {
+    }
+    interface SyDleGoodCls {
     }
     interface SyDleGoodInp {
     }
@@ -31,6 +35,12 @@ declare global {
     var HTMLSyDleAppRootElement: {
         prototype: HTMLSyDleAppRootElement;
         new (): HTMLSyDleAppRootElement;
+    };
+    interface HTMLSyDleBadClsElement extends Components.SyDleBadCls, HTMLStencilElement {
+    }
+    var HTMLSyDleBadClsElement: {
+        prototype: HTMLSyDleBadClsElement;
+        new (): HTMLSyDleBadClsElement;
     };
     interface HTMLSyDleBadInpElement extends Components.SyDleBadInp, HTMLStencilElement {
     }
@@ -55,6 +65,12 @@ declare global {
     var HTMLSyDleExampleElement: {
         prototype: HTMLSyDleExampleElement;
         new (): HTMLSyDleExampleElement;
+    };
+    interface HTMLSyDleGoodClsElement extends Components.SyDleGoodCls, HTMLStencilElement {
+    }
+    var HTMLSyDleGoodClsElement: {
+        prototype: HTMLSyDleGoodClsElement;
+        new (): HTMLSyDleGoodClsElement;
     };
     interface HTMLSyDleGoodInpElement extends Components.SyDleGoodInp, HTMLStencilElement {
     }
@@ -82,10 +98,12 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "sy-dle-app-root": HTMLSyDleAppRootElement;
+        "sy-dle-bad-cls": HTMLSyDleBadClsElement;
         "sy-dle-bad-inp": HTMLSyDleBadInpElement;
         "sy-dle-bad-lcp-image": HTMLSyDleBadLcpImageElement;
         "sy-dle-bad-lcp-willload": HTMLSyDleBadLcpWillloadElement;
         "sy-dle-example": HTMLSyDleExampleElement;
+        "sy-dle-good-cls": HTMLSyDleGoodClsElement;
         "sy-dle-good-inp": HTMLSyDleGoodInpElement;
         "sy-dle-good-lcp-image": HTMLSyDleGoodLcpImageElement;
         "sy-dle-good-lcp-willload": HTMLSyDleGoodLcpWillloadElement;
@@ -95,6 +113,8 @@ declare global {
 declare namespace LocalJSX {
     interface SyDleAppRoot {
     }
+    interface SyDleBadCls {
+    }
     interface SyDleBadInp {
     }
     interface SyDleBadLcpImage {
@@ -102,6 +122,8 @@ declare namespace LocalJSX {
     interface SyDleBadLcpWillload {
     }
     interface SyDleExample {
+    }
+    interface SyDleGoodCls {
     }
     interface SyDleGoodInp {
     }
@@ -113,10 +135,12 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "sy-dle-app-root": SyDleAppRoot;
+        "sy-dle-bad-cls": SyDleBadCls;
         "sy-dle-bad-inp": SyDleBadInp;
         "sy-dle-bad-lcp-image": SyDleBadLcpImage;
         "sy-dle-bad-lcp-willload": SyDleBadLcpWillload;
         "sy-dle-example": SyDleExample;
+        "sy-dle-good-cls": SyDleGoodCls;
         "sy-dle-good-inp": SyDleGoodInp;
         "sy-dle-good-lcp-image": SyDleGoodLcpImage;
         "sy-dle-good-lcp-willload": SyDleGoodLcpWillload;
@@ -128,10 +152,12 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "sy-dle-app-root": LocalJSX.SyDleAppRoot & JSXBase.HTMLAttributes<HTMLSyDleAppRootElement>;
+            "sy-dle-bad-cls": LocalJSX.SyDleBadCls & JSXBase.HTMLAttributes<HTMLSyDleBadClsElement>;
             "sy-dle-bad-inp": LocalJSX.SyDleBadInp & JSXBase.HTMLAttributes<HTMLSyDleBadInpElement>;
             "sy-dle-bad-lcp-image": LocalJSX.SyDleBadLcpImage & JSXBase.HTMLAttributes<HTMLSyDleBadLcpImageElement>;
             "sy-dle-bad-lcp-willload": LocalJSX.SyDleBadLcpWillload & JSXBase.HTMLAttributes<HTMLSyDleBadLcpWillloadElement>;
             "sy-dle-example": LocalJSX.SyDleExample & JSXBase.HTMLAttributes<HTMLSyDleExampleElement>;
+            "sy-dle-good-cls": LocalJSX.SyDleGoodCls & JSXBase.HTMLAttributes<HTMLSyDleGoodClsElement>;
             "sy-dle-good-inp": LocalJSX.SyDleGoodInp & JSXBase.HTMLAttributes<HTMLSyDleGoodInpElement>;
             "sy-dle-good-lcp-image": LocalJSX.SyDleGoodLcpImage & JSXBase.HTMLAttributes<HTMLSyDleGoodLcpImageElement>;
             "sy-dle-good-lcp-willload": LocalJSX.SyDleGoodLcpWillload & JSXBase.HTMLAttributes<HTMLSyDleGoodLcpWillloadElement>;
