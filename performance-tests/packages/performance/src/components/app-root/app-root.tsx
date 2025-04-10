@@ -14,16 +14,18 @@ export class AppRoot {
     const router = new Router(outlet);
     router.setRoutes([
       { path: '/', component: 'sy-dle-example' },
-      { path: '/about', component: 'page-about' },
+      { path: '/badLCP', component: 'sy-dle-bad-lcp-image' },
+      { path: '/goodLCP', component: 'sy-dle-good-lcp-image' },
     ]);
   }
 
   render() {
     return (
-      <div>
+      <div class={'container'}>
         <nav>
           <a href="/">Home</a>
-          <a href="/about">About</a>
+          <a href="/badLCP">LCP RUIM</a>
+          <a href="/goodLCP">LCP BOM</a>
         </nav>
         <main></main>
       </div>

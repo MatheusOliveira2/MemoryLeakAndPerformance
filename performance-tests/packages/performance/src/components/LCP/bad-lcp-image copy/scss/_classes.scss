@@ -1,0 +1,6 @@
+@include component-reboot;
+
+:host {
+  display: flex;
+  flex-direction: column;
+}
