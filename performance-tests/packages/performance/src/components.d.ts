@@ -18,6 +18,8 @@ export namespace Components {
     }
     interface SyDleBadRender {
     }
+    interface SyDleEventListener {
+    }
     interface SyDleExample {
     }
     interface SyDleGoodCls {
@@ -85,6 +87,12 @@ declare global {
     var HTMLSyDleBadRenderElement: {
         prototype: HTMLSyDleBadRenderElement;
         new (): HTMLSyDleBadRenderElement;
+    };
+    interface HTMLSyDleEventListenerElement extends Components.SyDleEventListener, HTMLStencilElement {
+    }
+    var HTMLSyDleEventListenerElement: {
+        prototype: HTMLSyDleEventListenerElement;
+        new (): HTMLSyDleEventListenerElement;
     };
     interface HTMLSyDleExampleElement extends Components.SyDleExample, HTMLStencilElement {
     }
@@ -171,6 +179,7 @@ declare global {
         "sy-dle-bad-lcp-image": HTMLSyDleBadLcpImageElement;
         "sy-dle-bad-lcp-willload": HTMLSyDleBadLcpWillloadElement;
         "sy-dle-bad-render": HTMLSyDleBadRenderElement;
+        "sy-dle-event-listener": HTMLSyDleEventListenerElement;
         "sy-dle-example": HTMLSyDleExampleElement;
         "sy-dle-good-cls": HTMLSyDleGoodClsElement;
         "sy-dle-good-inp": HTMLSyDleGoodInpElement;
@@ -198,6 +207,8 @@ declare namespace LocalJSX {
     interface SyDleBadLcpWillload {
     }
     interface SyDleBadRender {
+    }
+    interface SyDleEventListener {
     }
     interface SyDleExample {
     }
@@ -236,6 +247,7 @@ declare namespace LocalJSX {
         "sy-dle-bad-lcp-image": SyDleBadLcpImage;
         "sy-dle-bad-lcp-willload": SyDleBadLcpWillload;
         "sy-dle-bad-render": SyDleBadRender;
+        "sy-dle-event-listener": SyDleEventListener;
         "sy-dle-example": SyDleExample;
         "sy-dle-good-cls": SyDleGoodCls;
         "sy-dle-good-inp": SyDleGoodInp;
@@ -261,6 +273,7 @@ declare module "@stencil/core" {
             "sy-dle-bad-lcp-image": LocalJSX.SyDleBadLcpImage & JSXBase.HTMLAttributes<HTMLSyDleBadLcpImageElement>;
             "sy-dle-bad-lcp-willload": LocalJSX.SyDleBadLcpWillload & JSXBase.HTMLAttributes<HTMLSyDleBadLcpWillloadElement>;
             "sy-dle-bad-render": LocalJSX.SyDleBadRender & JSXBase.HTMLAttributes<HTMLSyDleBadRenderElement>;
+            "sy-dle-event-listener": LocalJSX.SyDleEventListener & JSXBase.HTMLAttributes<HTMLSyDleEventListenerElement>;
             "sy-dle-example": LocalJSX.SyDleExample & JSXBase.HTMLAttributes<HTMLSyDleExampleElement>;
             "sy-dle-good-cls": LocalJSX.SyDleGoodCls & JSXBase.HTMLAttributes<HTMLSyDleGoodClsElement>;
             "sy-dle-good-inp": LocalJSX.SyDleGoodInp & JSXBase.HTMLAttributes<HTMLSyDleGoodInpElement>;

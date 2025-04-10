@@ -29,8 +29,7 @@ export class AppRoot {
       { path: '/lazy', component: 'sy-dle-lazy' },
       { path: '/jank', component: 'sy-dle-jank' },
       { path: '/noJank', component: 'sy-dle-no-jank' },
-
-
+      { path: '/eventListener', component: 'sy-dle-event-listener' },
     ]);
   }
 
@@ -54,7 +53,7 @@ export class AppRoot {
           <a href="/lazy">Lazy</a>
           <a href="/jank">Jank</a>
           <a href="/noJank">Sem Jank</a>
-
+          <a href="/eventListener">Event Listener</a>
         </nav>
         <main></main>
       </div>
