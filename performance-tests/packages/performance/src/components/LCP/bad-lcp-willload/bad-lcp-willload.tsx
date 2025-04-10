@@ -15,19 +15,16 @@ export class BadLCPWillLOad{
   }
 
   private async loadCard(): Promise<string> {
-    return new Promise(resolve => {
-      setTimeout(() => {
-        resolve('Card');
-      }, 1000);
-    });
+
+    await fetch('https://httpstat.us/200?sleep=1000')
+    return 'Card'
   }
 
   private async loadForm(): Promise<string>{
-    return new Promise(resolve => {
-      setTimeout(() => {
-        resolve('Formulário');
-      }, 2000);
-    });
+    await fetch('https://httpstat.us/200?sleep=2000')
+
+    return "Formulário";
+
   }
 
   render() {
