@@ -1,0 +1,24 @@
+@include component-reboot;
+
+.scroll-container {
+  height: 400px;
+  overflow-y: scroll;
+  border: 1px solid #ccc;
+}
+
+.item {
+  padding: 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: #dc2626;
+  border-radius: 16px;
+  will-change: transform;
+  margin-left: 200px;
+  position: absolute;
+  margin-bottom: 200px;
+  top: 200px;
+}

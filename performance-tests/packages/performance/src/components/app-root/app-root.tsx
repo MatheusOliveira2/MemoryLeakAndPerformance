@@ -27,6 +27,10 @@ export class AppRoot {
       { path: '/goodRender', component: 'sy-dle-good-render' },
       { path: '/noLazy', component: 'sy-dle-no-lazy' },
       { path: '/lazy', component: 'sy-dle-lazy' },
+      { path: '/jank', component: 'sy-dle-jank' },
+      { path: '/noJank', component: 'sy-dle-no-jank' },
+
+
     ]);
   }
 
@@ -48,6 +52,9 @@ export class AppRoot {
           <a href="/goodRender">Render BOM</a>
           <a href="/noLazy">Sem Lazy</a>
           <a href="/lazy">Lazy</a>
+          <a href="/jank">Jank</a>
+          <a href="/noJank">Sem Jank</a>
+
         </nav>
         <main></main>
       </div>

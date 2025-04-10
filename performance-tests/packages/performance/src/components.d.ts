@@ -30,6 +30,8 @@ export namespace Components {
     }
     interface SyDleGoodRender {
     }
+    interface SyDleJank {
+    }
     interface SyDleLazy {
     }
     interface SyDleLazyImage {
@@ -41,6 +43,8 @@ export namespace Components {
         "value": {id: number};
     }
     interface SyDleMediumLcpWillload {
+    }
+    interface SyDleNoJank {
     }
     interface SyDleNoLazy {
     }
@@ -118,6 +122,12 @@ declare global {
         prototype: HTMLSyDleGoodRenderElement;
         new (): HTMLSyDleGoodRenderElement;
     };
+    interface HTMLSyDleJankElement extends Components.SyDleJank, HTMLStencilElement {
+    }
+    var HTMLSyDleJankElement: {
+        prototype: HTMLSyDleJankElement;
+        new (): HTMLSyDleJankElement;
+    };
     interface HTMLSyDleLazyElement extends Components.SyDleLazy, HTMLStencilElement {
     }
     var HTMLSyDleLazyElement: {
@@ -142,6 +152,12 @@ declare global {
         prototype: HTMLSyDleMediumLcpWillloadElement;
         new (): HTMLSyDleMediumLcpWillloadElement;
     };
+    interface HTMLSyDleNoJankElement extends Components.SyDleNoJank, HTMLStencilElement {
+    }
+    var HTMLSyDleNoJankElement: {
+        prototype: HTMLSyDleNoJankElement;
+        new (): HTMLSyDleNoJankElement;
+    };
     interface HTMLSyDleNoLazyElement extends Components.SyDleNoLazy, HTMLStencilElement {
     }
     var HTMLSyDleNoLazyElement: {
@@ -161,10 +177,12 @@ declare global {
         "sy-dle-good-lcp-image": HTMLSyDleGoodLcpImageElement;
         "sy-dle-good-lcp-willload": HTMLSyDleGoodLcpWillloadElement;
         "sy-dle-good-render": HTMLSyDleGoodRenderElement;
+        "sy-dle-jank": HTMLSyDleJankElement;
         "sy-dle-lazy": HTMLSyDleLazyElement;
         "sy-dle-lazy-image": HTMLSyDleLazyImageElement;
         "sy-dle-list-item": HTMLSyDleListItemElement;
         "sy-dle-medium-lcp-willload": HTMLSyDleMediumLcpWillloadElement;
+        "sy-dle-no-jank": HTMLSyDleNoJankElement;
         "sy-dle-no-lazy": HTMLSyDleNoLazyElement;
     }
 }
@@ -193,6 +211,8 @@ declare namespace LocalJSX {
     }
     interface SyDleGoodRender {
     }
+    interface SyDleJank {
+    }
     interface SyDleLazy {
     }
     interface SyDleLazyImage {
@@ -204,6 +224,8 @@ declare namespace LocalJSX {
         "value"?: {id: number};
     }
     interface SyDleMediumLcpWillload {
+    }
+    interface SyDleNoJank {
     }
     interface SyDleNoLazy {
     }
@@ -220,10 +242,12 @@ declare namespace LocalJSX {
         "sy-dle-good-lcp-image": SyDleGoodLcpImage;
         "sy-dle-good-lcp-willload": SyDleGoodLcpWillload;
         "sy-dle-good-render": SyDleGoodRender;
+        "sy-dle-jank": SyDleJank;
         "sy-dle-lazy": SyDleLazy;
         "sy-dle-lazy-image": SyDleLazyImage;
         "sy-dle-list-item": SyDleListItem;
         "sy-dle-medium-lcp-willload": SyDleMediumLcpWillload;
+        "sy-dle-no-jank": SyDleNoJank;
         "sy-dle-no-lazy": SyDleNoLazy;
     }
 }
@@ -243,10 +267,12 @@ declare module "@stencil/core" {
             "sy-dle-good-lcp-image": LocalJSX.SyDleGoodLcpImage & JSXBase.HTMLAttributes<HTMLSyDleGoodLcpImageElement>;
             "sy-dle-good-lcp-willload": LocalJSX.SyDleGoodLcpWillload & JSXBase.HTMLAttributes<HTMLSyDleGoodLcpWillloadElement>;
             "sy-dle-good-render": LocalJSX.SyDleGoodRender & JSXBase.HTMLAttributes<HTMLSyDleGoodRenderElement>;
+            "sy-dle-jank": LocalJSX.SyDleJank & JSXBase.HTMLAttributes<HTMLSyDleJankElement>;
             "sy-dle-lazy": LocalJSX.SyDleLazy & JSXBase.HTMLAttributes<HTMLSyDleLazyElement>;
             "sy-dle-lazy-image": LocalJSX.SyDleLazyImage & JSXBase.HTMLAttributes<HTMLSyDleLazyImageElement>;
             "sy-dle-list-item": LocalJSX.SyDleListItem & JSXBase.HTMLAttributes<HTMLSyDleListItemElement>;
             "sy-dle-medium-lcp-willload": LocalJSX.SyDleMediumLcpWillload & JSXBase.HTMLAttributes<HTMLSyDleMediumLcpWillloadElement>;
+            "sy-dle-no-jank": LocalJSX.SyDleNoJank & JSXBase.HTMLAttributes<HTMLSyDleNoJankElement>;
             "sy-dle-no-lazy": LocalJSX.SyDleNoLazy & JSXBase.HTMLAttributes<HTMLSyDleNoLazyElement>;
         }
     }
