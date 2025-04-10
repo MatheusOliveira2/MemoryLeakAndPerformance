@@ -9,10 +9,10 @@ export class GoodInp {
   @State() message = 'Clique no botão';
 
   private handleClick = () => {
-    // 🔥 Fornece feedback imediato
+    // Fornece feedback imediato
     this.message = 'Processando...';
 
-    // 🧠 Adia o trabalho pesado pro próximo ciclo da event loop
+    // Adia o trabalho pesado pro próximo ciclo da event loop
     setTimeout(() => {
       const start = performance.now();
       while (performance.now() - start < 2000) {
