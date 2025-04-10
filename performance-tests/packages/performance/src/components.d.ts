@@ -10,9 +10,15 @@ export namespace Components {
     }
     interface SyDleBadLcpImage {
     }
+    interface SyDleBadLcpWillload {
+    }
     interface SyDleExample {
     }
     interface SyDleGoodLcpImage {
+    }
+    interface SyDleGoodLcpWillload {
+    }
+    interface SyDleMediumLcpWillload {
     }
 }
 declare global {
@@ -28,6 +34,12 @@ declare global {
         prototype: HTMLSyDleBadLcpImageElement;
         new (): HTMLSyDleBadLcpImageElement;
     };
+    interface HTMLSyDleBadLcpWillloadElement extends Components.SyDleBadLcpWillload, HTMLStencilElement {
+    }
+    var HTMLSyDleBadLcpWillloadElement: {
+        prototype: HTMLSyDleBadLcpWillloadElement;
+        new (): HTMLSyDleBadLcpWillloadElement;
+    };
     interface HTMLSyDleExampleElement extends Components.SyDleExample, HTMLStencilElement {
     }
     var HTMLSyDleExampleElement: {
@@ -40,11 +52,26 @@ declare global {
         prototype: HTMLSyDleGoodLcpImageElement;
         new (): HTMLSyDleGoodLcpImageElement;
     };
+    interface HTMLSyDleGoodLcpWillloadElement extends Components.SyDleGoodLcpWillload, HTMLStencilElement {
+    }
+    var HTMLSyDleGoodLcpWillloadElement: {
+        prototype: HTMLSyDleGoodLcpWillloadElement;
+        new (): HTMLSyDleGoodLcpWillloadElement;
+    };
+    interface HTMLSyDleMediumLcpWillloadElement extends Components.SyDleMediumLcpWillload, HTMLStencilElement {
+    }
+    var HTMLSyDleMediumLcpWillloadElement: {
+        prototype: HTMLSyDleMediumLcpWillloadElement;
+        new (): HTMLSyDleMediumLcpWillloadElement;
+    };
     interface HTMLElementTagNameMap {
         "sy-dle-app-root": HTMLSyDleAppRootElement;
         "sy-dle-bad-lcp-image": HTMLSyDleBadLcpImageElement;
+        "sy-dle-bad-lcp-willload": HTMLSyDleBadLcpWillloadElement;
         "sy-dle-example": HTMLSyDleExampleElement;
         "sy-dle-good-lcp-image": HTMLSyDleGoodLcpImageElement;
+        "sy-dle-good-lcp-willload": HTMLSyDleGoodLcpWillloadElement;
+        "sy-dle-medium-lcp-willload": HTMLSyDleMediumLcpWillloadElement;
     }
 }
 declare namespace LocalJSX {
@@ -52,15 +79,24 @@ declare namespace LocalJSX {
     }
     interface SyDleBadLcpImage {
     }
+    interface SyDleBadLcpWillload {
+    }
     interface SyDleExample {
     }
     interface SyDleGoodLcpImage {
     }
+    interface SyDleGoodLcpWillload {
+    }
+    interface SyDleMediumLcpWillload {
+    }
     interface IntrinsicElements {
         "sy-dle-app-root": SyDleAppRoot;
         "sy-dle-bad-lcp-image": SyDleBadLcpImage;
+        "sy-dle-bad-lcp-willload": SyDleBadLcpWillload;
         "sy-dle-example": SyDleExample;
         "sy-dle-good-lcp-image": SyDleGoodLcpImage;
+        "sy-dle-good-lcp-willload": SyDleGoodLcpWillload;
+        "sy-dle-medium-lcp-willload": SyDleMediumLcpWillload;
     }
 }
 export { LocalJSX as JSX };
@@ -69,8 +105,11 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "sy-dle-app-root": LocalJSX.SyDleAppRoot & JSXBase.HTMLAttributes<HTMLSyDleAppRootElement>;
             "sy-dle-bad-lcp-image": LocalJSX.SyDleBadLcpImage & JSXBase.HTMLAttributes<HTMLSyDleBadLcpImageElement>;
+            "sy-dle-bad-lcp-willload": LocalJSX.SyDleBadLcpWillload & JSXBase.HTMLAttributes<HTMLSyDleBadLcpWillloadElement>;
             "sy-dle-example": LocalJSX.SyDleExample & JSXBase.HTMLAttributes<HTMLSyDleExampleElement>;
             "sy-dle-good-lcp-image": LocalJSX.SyDleGoodLcpImage & JSXBase.HTMLAttributes<HTMLSyDleGoodLcpImageElement>;
+            "sy-dle-good-lcp-willload": LocalJSX.SyDleGoodLcpWillload & JSXBase.HTMLAttributes<HTMLSyDleGoodLcpWillloadElement>;
+            "sy-dle-medium-lcp-willload": LocalJSX.SyDleMediumLcpWillload & JSXBase.HTMLAttributes<HTMLSyDleMediumLcpWillloadElement>;
         }
     }
 }

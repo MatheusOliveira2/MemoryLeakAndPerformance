@@ -16,6 +16,11 @@ export class AppRoot {
       { path: '/', component: 'sy-dle-example' },
       { path: '/badLCP', component: 'sy-dle-bad-lcp-image' },
       { path: '/goodLCP', component: 'sy-dle-good-lcp-image' },
+      { path: '/badLCPWillLoad', component: 'sy-dle-bad-lcp-willload' },
+      { path: '/mediumLCPWillLoad', component: 'sy-dle-medium-lcp-willLoad' },
+      { path: '/goodLCPWillLoad', component: 'sy-dle-good-lcp-willLoad' },
+
+
     ]);
   }
 
@@ -24,8 +29,11 @@ export class AppRoot {
       <div class={'container'}>
         <nav>
           <a href="/">Home</a>
-          <a href="/badLCP">LCP RUIM</a>
-          <a href="/goodLCP">LCP BOM</a>
+          <a href="/badLCP">LCP RUIM - IMAGEM</a>
+          <a href="/goodLCP">LCP BOM - IMAGEM</a>
+          <a href="/badLCPWillLoad">LCP RUIM - WILL LOAD</a>
+          <a href="/mediumLCPWillLoad">LCP Médio - WILL LOAD</a>
+          <a href="/goodLCPWillLoad">LCP BOM - WILL LOAD</a>
         </nav>
         <main></main>
       </div>
