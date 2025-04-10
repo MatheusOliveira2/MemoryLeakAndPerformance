@@ -25,7 +25,8 @@ export class AppRoot {
       { path: '/goodCLS', component: 'sy-dle-good-cls' },
       { path: '/badRender', component: 'sy-dle-bad-render' },
       { path: '/goodRender', component: 'sy-dle-good-render' },
-
+      { path: '/noLazy', component: 'sy-dle-no-lazy' },
+      { path: '/lazy', component: 'sy-dle-lazy' },
     ]);
   }
 
@@ -45,6 +46,8 @@ export class AppRoot {
           <a href="/goodCLS">CLS BOM</a>
           <a href="/badRender">Render RUIM</a>
           <a href="/goodRender">Render BOM</a>
+          <a href="/noLazy">Sem Lazy</a>
+          <a href="/lazy">Lazy</a>
         </nav>
         <main></main>
       </div>

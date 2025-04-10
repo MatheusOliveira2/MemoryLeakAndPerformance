@@ -1,0 +1,12 @@
+@include component-reboot;
+
+.ad-placeholder {
+  height: 60px; /* 🧱 reserva o espaço necessário */
+}
+
+.ad-banner {
+  background: #ffd700;
+  padding: 16px;
+  text-align: center;
+  font-weight: bold;
+}

@@ -30,10 +30,19 @@ export namespace Components {
     }
     interface SyDleGoodRender {
     }
+    interface SyDleLazy {
+    }
+    interface SyDleLazyImage {
+        "alt": string;
+        "disableLazy": boolean;
+        "src": string;
+    }
     interface SyDleListItem {
         "value": {id: number};
     }
     interface SyDleMediumLcpWillload {
+    }
+    interface SyDleNoLazy {
     }
 }
 declare global {
@@ -109,6 +118,18 @@ declare global {
         prototype: HTMLSyDleGoodRenderElement;
         new (): HTMLSyDleGoodRenderElement;
     };
+    interface HTMLSyDleLazyElement extends Components.SyDleLazy, HTMLStencilElement {
+    }
+    var HTMLSyDleLazyElement: {
+        prototype: HTMLSyDleLazyElement;
+        new (): HTMLSyDleLazyElement;
+    };
+    interface HTMLSyDleLazyImageElement extends Components.SyDleLazyImage, HTMLStencilElement {
+    }
+    var HTMLSyDleLazyImageElement: {
+        prototype: HTMLSyDleLazyImageElement;
+        new (): HTMLSyDleLazyImageElement;
+    };
     interface HTMLSyDleListItemElement extends Components.SyDleListItem, HTMLStencilElement {
     }
     var HTMLSyDleListItemElement: {
@@ -120,6 +141,12 @@ declare global {
     var HTMLSyDleMediumLcpWillloadElement: {
         prototype: HTMLSyDleMediumLcpWillloadElement;
         new (): HTMLSyDleMediumLcpWillloadElement;
+    };
+    interface HTMLSyDleNoLazyElement extends Components.SyDleNoLazy, HTMLStencilElement {
+    }
+    var HTMLSyDleNoLazyElement: {
+        prototype: HTMLSyDleNoLazyElement;
+        new (): HTMLSyDleNoLazyElement;
     };
     interface HTMLElementTagNameMap {
         "sy-dle-app-root": HTMLSyDleAppRootElement;
@@ -134,8 +161,11 @@ declare global {
         "sy-dle-good-lcp-image": HTMLSyDleGoodLcpImageElement;
         "sy-dle-good-lcp-willload": HTMLSyDleGoodLcpWillloadElement;
         "sy-dle-good-render": HTMLSyDleGoodRenderElement;
+        "sy-dle-lazy": HTMLSyDleLazyElement;
+        "sy-dle-lazy-image": HTMLSyDleLazyImageElement;
         "sy-dle-list-item": HTMLSyDleListItemElement;
         "sy-dle-medium-lcp-willload": HTMLSyDleMediumLcpWillloadElement;
+        "sy-dle-no-lazy": HTMLSyDleNoLazyElement;
     }
 }
 declare namespace LocalJSX {
@@ -163,10 +193,19 @@ declare namespace LocalJSX {
     }
     interface SyDleGoodRender {
     }
+    interface SyDleLazy {
+    }
+    interface SyDleLazyImage {
+        "alt"?: string;
+        "disableLazy"?: boolean;
+        "src"?: string;
+    }
     interface SyDleListItem {
         "value"?: {id: number};
     }
     interface SyDleMediumLcpWillload {
+    }
+    interface SyDleNoLazy {
     }
     interface IntrinsicElements {
         "sy-dle-app-root": SyDleAppRoot;
@@ -181,8 +220,11 @@ declare namespace LocalJSX {
         "sy-dle-good-lcp-image": SyDleGoodLcpImage;
         "sy-dle-good-lcp-willload": SyDleGoodLcpWillload;
         "sy-dle-good-render": SyDleGoodRender;
+        "sy-dle-lazy": SyDleLazy;
+        "sy-dle-lazy-image": SyDleLazyImage;
         "sy-dle-list-item": SyDleListItem;
         "sy-dle-medium-lcp-willload": SyDleMediumLcpWillload;
+        "sy-dle-no-lazy": SyDleNoLazy;
     }
 }
 export { LocalJSX as JSX };
@@ -201,8 +243,11 @@ declare module "@stencil/core" {
             "sy-dle-good-lcp-image": LocalJSX.SyDleGoodLcpImage & JSXBase.HTMLAttributes<HTMLSyDleGoodLcpImageElement>;
             "sy-dle-good-lcp-willload": LocalJSX.SyDleGoodLcpWillload & JSXBase.HTMLAttributes<HTMLSyDleGoodLcpWillloadElement>;
             "sy-dle-good-render": LocalJSX.SyDleGoodRender & JSXBase.HTMLAttributes<HTMLSyDleGoodRenderElement>;
+            "sy-dle-lazy": LocalJSX.SyDleLazy & JSXBase.HTMLAttributes<HTMLSyDleLazyElement>;
+            "sy-dle-lazy-image": LocalJSX.SyDleLazyImage & JSXBase.HTMLAttributes<HTMLSyDleLazyImageElement>;
             "sy-dle-list-item": LocalJSX.SyDleListItem & JSXBase.HTMLAttributes<HTMLSyDleListItemElement>;
             "sy-dle-medium-lcp-willload": LocalJSX.SyDleMediumLcpWillload & JSXBase.HTMLAttributes<HTMLSyDleMediumLcpWillloadElement>;
+            "sy-dle-no-lazy": LocalJSX.SyDleNoLazy & JSXBase.HTMLAttributes<HTMLSyDleNoLazyElement>;
         }
     }
 }

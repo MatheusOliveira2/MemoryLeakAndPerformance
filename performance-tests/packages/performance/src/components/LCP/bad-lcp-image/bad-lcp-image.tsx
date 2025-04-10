@@ -12,7 +12,7 @@ export class BadLCPImage {
         <img src="https://picsum.photos/id/237/5000" alt=""/>
 
         <sy-text>
-          Bad LCP
+          GOOD LCP
         </sy-text>
 
         <sy-text>
