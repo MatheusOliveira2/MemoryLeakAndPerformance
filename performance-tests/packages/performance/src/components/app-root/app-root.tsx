@@ -19,8 +19,8 @@ export class AppRoot {
       { path: '/badLCPWillLoad', component: 'sy-dle-bad-lcp-willload' },
       { path: '/mediumLCPWillLoad', component: 'sy-dle-medium-lcp-willLoad' },
       { path: '/goodLCPWillLoad', component: 'sy-dle-good-lcp-willLoad' },
-
-
+      { path: '/badINP', component: 'sy-dle-bad-inp' },
+      { path: '/goodINP', component: 'sy-dle-good-inp' },
     ]);
   }
 
@@ -34,6 +34,8 @@ export class AppRoot {
           <a href="/badLCPWillLoad">LCP RUIM - WILL LOAD</a>
           <a href="/mediumLCPWillLoad">LCP Médio - WILL LOAD</a>
           <a href="/goodLCPWillLoad">LCP BOM - WILL LOAD</a>
+          <a href="/badINP">INP RUIM</a>
+          <a href="/goodINP">INP BOM</a>
         </nav>
         <main></main>
       </div>

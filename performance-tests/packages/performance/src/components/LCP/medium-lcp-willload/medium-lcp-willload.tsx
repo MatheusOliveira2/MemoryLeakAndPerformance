@@ -35,7 +35,6 @@ export class MediumLCPWillLOad{
         <span>{this.card}</span>
         </div> : 
         null}
-
         {this.form? <div>{this.form}</div>: null}
       </Host>
     );
