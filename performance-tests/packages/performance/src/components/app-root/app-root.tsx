@@ -29,7 +29,8 @@ export class AppRoot {
       { path: '/lazy', component: 'sy-dle-lazy' },
       { path: '/jank', component: 'sy-dle-jank' },
       { path: '/noJank', component: 'sy-dle-no-jank' },
-      { path: '/eventListener', component: 'sy-dle-event-listener' },
+      { path: '/detachedDomLeak', component: 'sy-dle-detached-dom-leak' },
+      { path: '/detachedDomFixed', component: 'sy-dle-detached-dom-leak-fixed' },
     ]);
   }
 
@@ -53,7 +54,8 @@ export class AppRoot {
           <a href="/lazy">Lazy</a>
           <a href="/jank">Jank</a>
           <a href="/noJank">Sem Jank</a>
-          <a href="/eventListener">Event Listener</a>
+          <a href="/detachedDomLeak">Detached Dom Leak</a>
+          <a href="/detachedDomFixed">Detached Dom Leak Corrigido</a>
         </nav>
         <main></main>
       </div>

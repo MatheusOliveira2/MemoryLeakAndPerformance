@@ -30,8 +30,7 @@ export const config: Config = {
     {
       type: 'www',
       serviceWorker: null,
-      copy: [...copyExternalLibsConfig(externalLibs),{src: 'assets'}],
-      
+      copy: [...copyExternalLibsConfig(externalLibs)],
     },
   ],
 };

@@ -18,7 +18,9 @@ export namespace Components {
     }
     interface SyDleBadRender {
     }
-    interface SyDleEventListener {
+    interface SyDleDetachedDomLeak {
+    }
+    interface SyDleDetachedDomLeakFixed {
     }
     interface SyDleExample {
     }
@@ -88,11 +90,17 @@ declare global {
         prototype: HTMLSyDleBadRenderElement;
         new (): HTMLSyDleBadRenderElement;
     };
-    interface HTMLSyDleEventListenerElement extends Components.SyDleEventListener, HTMLStencilElement {
+    interface HTMLSyDleDetachedDomLeakElement extends Components.SyDleDetachedDomLeak, HTMLStencilElement {
     }
-    var HTMLSyDleEventListenerElement: {
-        prototype: HTMLSyDleEventListenerElement;
-        new (): HTMLSyDleEventListenerElement;
+    var HTMLSyDleDetachedDomLeakElement: {
+        prototype: HTMLSyDleDetachedDomLeakElement;
+        new (): HTMLSyDleDetachedDomLeakElement;
+    };
+    interface HTMLSyDleDetachedDomLeakFixedElement extends Components.SyDleDetachedDomLeakFixed, HTMLStencilElement {
+    }
+    var HTMLSyDleDetachedDomLeakFixedElement: {
+        prototype: HTMLSyDleDetachedDomLeakFixedElement;
+        new (): HTMLSyDleDetachedDomLeakFixedElement;
     };
     interface HTMLSyDleExampleElement extends Components.SyDleExample, HTMLStencilElement {
     }
@@ -179,7 +187,8 @@ declare global {
         "sy-dle-bad-lcp-image": HTMLSyDleBadLcpImageElement;
         "sy-dle-bad-lcp-willload": HTMLSyDleBadLcpWillloadElement;
         "sy-dle-bad-render": HTMLSyDleBadRenderElement;
-        "sy-dle-event-listener": HTMLSyDleEventListenerElement;
+        "sy-dle-detached-dom-leak": HTMLSyDleDetachedDomLeakElement;
+        "sy-dle-detached-dom-leak-fixed": HTMLSyDleDetachedDomLeakFixedElement;
         "sy-dle-example": HTMLSyDleExampleElement;
         "sy-dle-good-cls": HTMLSyDleGoodClsElement;
         "sy-dle-good-inp": HTMLSyDleGoodInpElement;
@@ -208,7 +217,9 @@ declare namespace LocalJSX {
     }
     interface SyDleBadRender {
     }
-    interface SyDleEventListener {
+    interface SyDleDetachedDomLeak {
+    }
+    interface SyDleDetachedDomLeakFixed {
     }
     interface SyDleExample {
     }
@@ -247,7 +258,8 @@ declare namespace LocalJSX {
         "sy-dle-bad-lcp-image": SyDleBadLcpImage;
         "sy-dle-bad-lcp-willload": SyDleBadLcpWillload;
         "sy-dle-bad-render": SyDleBadRender;
-        "sy-dle-event-listener": SyDleEventListener;
+        "sy-dle-detached-dom-leak": SyDleDetachedDomLeak;
+        "sy-dle-detached-dom-leak-fixed": SyDleDetachedDomLeakFixed;
         "sy-dle-example": SyDleExample;
         "sy-dle-good-cls": SyDleGoodCls;
         "sy-dle-good-inp": SyDleGoodInp;
@@ -273,7 +285,8 @@ declare module "@stencil/core" {
             "sy-dle-bad-lcp-image": LocalJSX.SyDleBadLcpImage & JSXBase.HTMLAttributes<HTMLSyDleBadLcpImageElement>;
             "sy-dle-bad-lcp-willload": LocalJSX.SyDleBadLcpWillload & JSXBase.HTMLAttributes<HTMLSyDleBadLcpWillloadElement>;
             "sy-dle-bad-render": LocalJSX.SyDleBadRender & JSXBase.HTMLAttributes<HTMLSyDleBadRenderElement>;
-            "sy-dle-event-listener": LocalJSX.SyDleEventListener & JSXBase.HTMLAttributes<HTMLSyDleEventListenerElement>;
+            "sy-dle-detached-dom-leak": LocalJSX.SyDleDetachedDomLeak & JSXBase.HTMLAttributes<HTMLSyDleDetachedDomLeakElement>;
+            "sy-dle-detached-dom-leak-fixed": LocalJSX.SyDleDetachedDomLeakFixed & JSXBase.HTMLAttributes<HTMLSyDleDetachedDomLeakFixedElement>;
             "sy-dle-example": LocalJSX.SyDleExample & JSXBase.HTMLAttributes<HTMLSyDleExampleElement>;
             "sy-dle-good-cls": LocalJSX.SyDleGoodCls & JSXBase.HTMLAttributes<HTMLSyDleGoodClsElement>;
             "sy-dle-good-inp": LocalJSX.SyDleGoodInp & JSXBase.HTMLAttributes<HTMLSyDleGoodInpElement>;
