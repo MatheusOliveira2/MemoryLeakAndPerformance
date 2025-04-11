@@ -21,6 +21,7 @@ export class AppRoot {
       { path: '/goodLCPWillLoad', component: 'sy-dle-good-lcp-willLoad' },
       { path: '/badINP', component: 'sy-dle-bad-inp' },
       { path: '/goodINP', component: 'sy-dle-good-inp' },
+      { path: '/idealINP', component: 'sy-dle-ideal-inp' },
       { path: '/badCLS', component: 'sy-dle-bad-cls' },
       { path: '/goodCLS', component: 'sy-dle-good-cls' },
       { path: '/badRender', component: 'sy-dle-bad-render' },
@@ -49,6 +50,7 @@ export class AppRoot {
           <a href="/goodLCPWillLoad">LCP BOM - WILL LOAD</a>
           <a href="/badINP">INP RUIM</a>
           <a href="/goodINP">INP BOM</a>
+          <a href="/idealINP">INP Ideal - Web Worker</a>
           <a href="/badCLS">CLS RUIM</a>
           <a href="/goodCLS">CLS BOM</a>
           <a href="/badRender">Render RUIM</a>

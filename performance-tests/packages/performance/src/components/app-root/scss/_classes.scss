@@ -17,6 +17,7 @@ nav {
   display: flex;
   flex-direction: row;
   gap: 8px;
+  flex-wrap: wrap;
 }
 
 main{
@@ -28,4 +29,14 @@ main{
 
 a{
   font-size: 8px;
+  text-decoration: none;
+  color: inherit;
+  padding: 8px;
+  background-color: rgb(48, 111, 167);
+
+  &:hover{
+    text-decoration: underline;
+    opacity: 0.4;
+    
+  }
 }
