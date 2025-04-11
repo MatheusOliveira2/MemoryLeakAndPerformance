@@ -46,6 +46,10 @@ export namespace Components {
     interface SyDleListItem {
         "value": {id: number};
     }
+    interface SyDleListenerLeak {
+    }
+    interface SyDleListenerLeakList {
+    }
     interface SyDleMediumLcpWillload {
     }
     interface SyDleNoJank {
@@ -162,6 +166,18 @@ declare global {
         prototype: HTMLSyDleListItemElement;
         new (): HTMLSyDleListItemElement;
     };
+    interface HTMLSyDleListenerLeakElement extends Components.SyDleListenerLeak, HTMLStencilElement {
+    }
+    var HTMLSyDleListenerLeakElement: {
+        prototype: HTMLSyDleListenerLeakElement;
+        new (): HTMLSyDleListenerLeakElement;
+    };
+    interface HTMLSyDleListenerLeakListElement extends Components.SyDleListenerLeakList, HTMLStencilElement {
+    }
+    var HTMLSyDleListenerLeakListElement: {
+        prototype: HTMLSyDleListenerLeakListElement;
+        new (): HTMLSyDleListenerLeakListElement;
+    };
     interface HTMLSyDleMediumLcpWillloadElement extends Components.SyDleMediumLcpWillload, HTMLStencilElement {
     }
     var HTMLSyDleMediumLcpWillloadElement: {
@@ -199,6 +215,8 @@ declare global {
         "sy-dle-lazy": HTMLSyDleLazyElement;
         "sy-dle-lazy-image": HTMLSyDleLazyImageElement;
         "sy-dle-list-item": HTMLSyDleListItemElement;
+        "sy-dle-listener-leak": HTMLSyDleListenerLeakElement;
+        "sy-dle-listener-leak-list": HTMLSyDleListenerLeakListElement;
         "sy-dle-medium-lcp-willload": HTMLSyDleMediumLcpWillloadElement;
         "sy-dle-no-jank": HTMLSyDleNoJankElement;
         "sy-dle-no-lazy": HTMLSyDleNoLazyElement;
@@ -245,6 +263,10 @@ declare namespace LocalJSX {
     interface SyDleListItem {
         "value"?: {id: number};
     }
+    interface SyDleListenerLeak {
+    }
+    interface SyDleListenerLeakList {
+    }
     interface SyDleMediumLcpWillload {
     }
     interface SyDleNoJank {
@@ -270,6 +292,8 @@ declare namespace LocalJSX {
         "sy-dle-lazy": SyDleLazy;
         "sy-dle-lazy-image": SyDleLazyImage;
         "sy-dle-list-item": SyDleListItem;
+        "sy-dle-listener-leak": SyDleListenerLeak;
+        "sy-dle-listener-leak-list": SyDleListenerLeakList;
         "sy-dle-medium-lcp-willload": SyDleMediumLcpWillload;
         "sy-dle-no-jank": SyDleNoJank;
         "sy-dle-no-lazy": SyDleNoLazy;
@@ -297,6 +321,8 @@ declare module "@stencil/core" {
             "sy-dle-lazy": LocalJSX.SyDleLazy & JSXBase.HTMLAttributes<HTMLSyDleLazyElement>;
             "sy-dle-lazy-image": LocalJSX.SyDleLazyImage & JSXBase.HTMLAttributes<HTMLSyDleLazyImageElement>;
             "sy-dle-list-item": LocalJSX.SyDleListItem & JSXBase.HTMLAttributes<HTMLSyDleListItemElement>;
+            "sy-dle-listener-leak": LocalJSX.SyDleListenerLeak & JSXBase.HTMLAttributes<HTMLSyDleListenerLeakElement>;
+            "sy-dle-listener-leak-list": LocalJSX.SyDleListenerLeakList & JSXBase.HTMLAttributes<HTMLSyDleListenerLeakListElement>;
             "sy-dle-medium-lcp-willload": LocalJSX.SyDleMediumLcpWillload & JSXBase.HTMLAttributes<HTMLSyDleMediumLcpWillloadElement>;
             "sy-dle-no-jank": LocalJSX.SyDleNoJank & JSXBase.HTMLAttributes<HTMLSyDleNoJankElement>;
             "sy-dle-no-lazy": LocalJSX.SyDleNoLazy & JSXBase.HTMLAttributes<HTMLSyDleNoLazyElement>;

@@ -31,6 +31,7 @@ export class AppRoot {
       { path: '/noJank', component: 'sy-dle-no-jank' },
       { path: '/detachedDomLeak', component: 'sy-dle-detached-dom-leak' },
       { path: '/detachedDomFixed', component: 'sy-dle-detached-dom-leak-fixed' },
+      { path: '/listenerLeak', component: 'sy-dle-listener-leak-list' },
     ]);
   }
 
@@ -56,6 +57,7 @@ export class AppRoot {
           <a href="/noJank">Sem Jank</a>
           <a href="/detachedDomLeak">Detached Dom Leak</a>
           <a href="/detachedDomFixed">Detached Dom Leak Corrigido</a>
+          <a href="/listenerLeak">Listeners</a>
         </nav>
         <main></main>
       </div>
