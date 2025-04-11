@@ -56,6 +56,8 @@ export namespace Components {
     }
     interface SyDleNoLazy {
     }
+    interface SyDleWindowLeak {
+    }
 }
 declare global {
     interface HTMLSyDleAppRootElement extends Components.SyDleAppRoot, HTMLStencilElement {
@@ -196,6 +198,12 @@ declare global {
         prototype: HTMLSyDleNoLazyElement;
         new (): HTMLSyDleNoLazyElement;
     };
+    interface HTMLSyDleWindowLeakElement extends Components.SyDleWindowLeak, HTMLStencilElement {
+    }
+    var HTMLSyDleWindowLeakElement: {
+        prototype: HTMLSyDleWindowLeakElement;
+        new (): HTMLSyDleWindowLeakElement;
+    };
     interface HTMLElementTagNameMap {
         "sy-dle-app-root": HTMLSyDleAppRootElement;
         "sy-dle-bad-cls": HTMLSyDleBadClsElement;
@@ -220,6 +228,7 @@ declare global {
         "sy-dle-medium-lcp-willload": HTMLSyDleMediumLcpWillloadElement;
         "sy-dle-no-jank": HTMLSyDleNoJankElement;
         "sy-dle-no-lazy": HTMLSyDleNoLazyElement;
+        "sy-dle-window-leak": HTMLSyDleWindowLeakElement;
     }
 }
 declare namespace LocalJSX {
@@ -273,6 +282,8 @@ declare namespace LocalJSX {
     }
     interface SyDleNoLazy {
     }
+    interface SyDleWindowLeak {
+    }
     interface IntrinsicElements {
         "sy-dle-app-root": SyDleAppRoot;
         "sy-dle-bad-cls": SyDleBadCls;
@@ -297,6 +308,7 @@ declare namespace LocalJSX {
         "sy-dle-medium-lcp-willload": SyDleMediumLcpWillload;
         "sy-dle-no-jank": SyDleNoJank;
         "sy-dle-no-lazy": SyDleNoLazy;
+        "sy-dle-window-leak": SyDleWindowLeak;
     }
 }
 export { LocalJSX as JSX };
@@ -326,6 +338,7 @@ declare module "@stencil/core" {
             "sy-dle-medium-lcp-willload": LocalJSX.SyDleMediumLcpWillload & JSXBase.HTMLAttributes<HTMLSyDleMediumLcpWillloadElement>;
             "sy-dle-no-jank": LocalJSX.SyDleNoJank & JSXBase.HTMLAttributes<HTMLSyDleNoJankElement>;
             "sy-dle-no-lazy": LocalJSX.SyDleNoLazy & JSXBase.HTMLAttributes<HTMLSyDleNoLazyElement>;
+            "sy-dle-window-leak": LocalJSX.SyDleWindowLeak & JSXBase.HTMLAttributes<HTMLSyDleWindowLeakElement>;
         }
     }
 }
