@@ -43,6 +43,12 @@ export namespace Components {
         "disableLazy": boolean;
         "src": string;
     }
+    interface SyDleLeakConsumer {
+    }
+    interface SyDleLeakConsumerList {
+    }
+    interface SyDleLeakResize {
+    }
     interface SyDleListItem {
         "value": {id: number};
     }
@@ -162,6 +168,24 @@ declare global {
         prototype: HTMLSyDleLazyImageElement;
         new (): HTMLSyDleLazyImageElement;
     };
+    interface HTMLSyDleLeakConsumerElement extends Components.SyDleLeakConsumer, HTMLStencilElement {
+    }
+    var HTMLSyDleLeakConsumerElement: {
+        prototype: HTMLSyDleLeakConsumerElement;
+        new (): HTMLSyDleLeakConsumerElement;
+    };
+    interface HTMLSyDleLeakConsumerListElement extends Components.SyDleLeakConsumerList, HTMLStencilElement {
+    }
+    var HTMLSyDleLeakConsumerListElement: {
+        prototype: HTMLSyDleLeakConsumerListElement;
+        new (): HTMLSyDleLeakConsumerListElement;
+    };
+    interface HTMLSyDleLeakResizeElement extends Components.SyDleLeakResize, HTMLStencilElement {
+    }
+    var HTMLSyDleLeakResizeElement: {
+        prototype: HTMLSyDleLeakResizeElement;
+        new (): HTMLSyDleLeakResizeElement;
+    };
     interface HTMLSyDleListItemElement extends Components.SyDleListItem, HTMLStencilElement {
     }
     var HTMLSyDleListItemElement: {
@@ -222,6 +246,9 @@ declare global {
         "sy-dle-jank": HTMLSyDleJankElement;
         "sy-dle-lazy": HTMLSyDleLazyElement;
         "sy-dle-lazy-image": HTMLSyDleLazyImageElement;
+        "sy-dle-leak-consumer": HTMLSyDleLeakConsumerElement;
+        "sy-dle-leak-consumer-list": HTMLSyDleLeakConsumerListElement;
+        "sy-dle-leak-resize": HTMLSyDleLeakResizeElement;
         "sy-dle-list-item": HTMLSyDleListItemElement;
         "sy-dle-listener-leak": HTMLSyDleListenerLeakElement;
         "sy-dle-listener-leak-list": HTMLSyDleListenerLeakListElement;
@@ -269,6 +296,12 @@ declare namespace LocalJSX {
         "disableLazy"?: boolean;
         "src"?: string;
     }
+    interface SyDleLeakConsumer {
+    }
+    interface SyDleLeakConsumerList {
+    }
+    interface SyDleLeakResize {
+    }
     interface SyDleListItem {
         "value"?: {id: number};
     }
@@ -302,6 +335,9 @@ declare namespace LocalJSX {
         "sy-dle-jank": SyDleJank;
         "sy-dle-lazy": SyDleLazy;
         "sy-dle-lazy-image": SyDleLazyImage;
+        "sy-dle-leak-consumer": SyDleLeakConsumer;
+        "sy-dle-leak-consumer-list": SyDleLeakConsumerList;
+        "sy-dle-leak-resize": SyDleLeakResize;
         "sy-dle-list-item": SyDleListItem;
         "sy-dle-listener-leak": SyDleListenerLeak;
         "sy-dle-listener-leak-list": SyDleListenerLeakList;
@@ -332,6 +368,9 @@ declare module "@stencil/core" {
             "sy-dle-jank": LocalJSX.SyDleJank & JSXBase.HTMLAttributes<HTMLSyDleJankElement>;
             "sy-dle-lazy": LocalJSX.SyDleLazy & JSXBase.HTMLAttributes<HTMLSyDleLazyElement>;
             "sy-dle-lazy-image": LocalJSX.SyDleLazyImage & JSXBase.HTMLAttributes<HTMLSyDleLazyImageElement>;
+            "sy-dle-leak-consumer": LocalJSX.SyDleLeakConsumer & JSXBase.HTMLAttributes<HTMLSyDleLeakConsumerElement>;
+            "sy-dle-leak-consumer-list": LocalJSX.SyDleLeakConsumerList & JSXBase.HTMLAttributes<HTMLSyDleLeakConsumerListElement>;
+            "sy-dle-leak-resize": LocalJSX.SyDleLeakResize & JSXBase.HTMLAttributes<HTMLSyDleLeakResizeElement>;
             "sy-dle-list-item": LocalJSX.SyDleListItem & JSXBase.HTMLAttributes<HTMLSyDleListItemElement>;
             "sy-dle-listener-leak": LocalJSX.SyDleListenerLeak & JSXBase.HTMLAttributes<HTMLSyDleListenerLeakElement>;
             "sy-dle-listener-leak-list": LocalJSX.SyDleListenerLeakList & JSXBase.HTMLAttributes<HTMLSyDleListenerLeakListElement>;

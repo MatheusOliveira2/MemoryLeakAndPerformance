@@ -33,6 +33,7 @@ export class AppRoot {
       { path: '/detachedDomFixed', component: 'sy-dle-detached-dom-leak-fixed' },
       { path: '/listenerLeak', component: 'sy-dle-listener-leak-list' },
       { path: '/windowLeak', component: 'sy-dle-window-leak' },
+      { path: '/leakConsumer', component: 'sy-dle-leak-consumer-list' },
     ]);
   }
 
@@ -60,6 +61,7 @@ export class AppRoot {
           <a href="/detachedDomFixed">Detached Dom Leak Corrigido</a>
           <a href="/listenerLeak">Listeners</a>
           <a href="/windowLeak">Window Leak</a>
+          <a href="/leakConsumer">Consumer Leak</a>
         </nav>
         <main></main>
       </div>
